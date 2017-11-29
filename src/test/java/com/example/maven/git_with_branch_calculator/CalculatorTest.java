@@ -9,12 +9,11 @@ import org.junit.Test;
 
 /**
  * 
- * Hur ska man tänka around test? 
- * Check what the method does. If the method gets inputs, we need to create inputs in our tests. 
- * If numbers easy, if not we need to create data to test with. for arraylists etc. I think!?
+ * Hur ska man tänka around test? Check what the method does. If the method gets
+ * inputs, we need to create inputs in our tests. If numbers easy, if not we
+ * need to create data to test with. for arraylists etc. I think!?
  * 
- * */
-
+ */
 
 public class CalculatorTest {
 
@@ -59,6 +58,24 @@ public class CalculatorTest {
 			assertEquals(
 					cal.subtract(firstNumber, secondNumber),
 					result);
+		}
+	}
+
+	public void testMultiplyMethod() {
+		Random random = new Random();
+		int firstNumber = 0;
+		int secondNumber = 0;
+		int result = 0;
+
+		for (int i = 0; i < 10; i++) {
+			firstNumber = random.nextInt(100);
+			secondNumber = random.nextInt(100);
+
+			result = firstNumber * secondNumber;
+			LOG.info("Testing the method multiply with: "
+					+ firstNumber + " and " + secondNumber);
+			assertEquals(cal.multiplytract(firstNumber,
+					secondNumber), result);
 		}
 
 	}
