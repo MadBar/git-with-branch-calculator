@@ -79,4 +79,31 @@ public class CalculatorTest {
 		}
 
 	}
+
+	public void testDivitionMethod() {
+		Random random = new Random();
+		int firstNumber = 0;
+		int secondNumber = 0;
+		int result = 0;
+
+		for (int i = 0; i < 10; i++) {
+			firstNumber = random.nextInt(100);
+			secondNumber = random.nextInt(100);
+
+			try {
+				result = firstNumber / secondNumber;
+				
+
+			} catch (ArithmeticException e) {
+				e.getMessage();
+			}
+			LOG.info(
+					"Testing the method divition with: "
+							+ firstNumber + " and "
+							+ secondNumber);
+			assertEquals(cal.divition(firstNumber,
+					secondNumber), result);
+		}
+
+	}
 }
