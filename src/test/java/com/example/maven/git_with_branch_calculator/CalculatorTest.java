@@ -61,6 +61,7 @@ public class CalculatorTest {
 		}
 	}
 
+	@Test
 	public void testMultiplyMethod() {
 		Random random = new Random();
 		int firstNumber = 0;
@@ -80,6 +81,7 @@ public class CalculatorTest {
 
 	}
 
+	@Test
 	public void testDivitionMethod() {
 		Random random = new Random();
 		int firstNumber = 0;
